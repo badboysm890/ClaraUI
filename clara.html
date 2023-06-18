@@ -8,9 +8,12 @@
     <title>Document</title>
 
     <!-- google sans -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism-dark.min.css" integrity="sha512-y6rcKLYkttB9ZUBaz0IsncWFo1VoqISrcMY6J1i6Nb9WB9jRrpll8zjt5e1/naZHyXFoR/1VlH72+2VJ1Uzh7A==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js" integrity="sha512-UOoJElONeUNzQbbKQbjldDf9MwOHqxNz49NNJJ1d90yp+X9edsHyJoAs6O4K19CZGaIdjI5ohK+O2y5lBTW6uQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism-dark.min.css"
+        integrity="sha512-y6rcKLYkttB9ZUBaz0IsncWFo1VoqISrcMY6J1i6Nb9WB9jRrpll8zjt5e1/naZHyXFoR/1VlH72+2VJ1Uzh7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js"
+        integrity="sha512-UOoJElONeUNzQbbKQbjldDf9MwOHqxNz49NNJJ1d90yp+X9edsHyJoAs6O4K19CZGaIdjI5ohK+O2y5lBTW6uQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
@@ -22,85 +25,122 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js" integrity="sha512-8RnEqURPUc5aqFEN04aQEiPlSAdE0jlFS/9iGgUyNtwFnSKCXhmB6ZTNl7LnDtDWKabJIASzXrzD0K+LYexU9g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js"
+        integrity="sha512-8RnEqURPUc5aqFEN04aQEiPlSAdE0jlFS/9iGgUyNtwFnSKCXhmB6ZTNl7LnDtDWKabJIASzXrzD0K+LYexU9g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
-<body class="gradient-bg">
-    <!-- a bot like button near clara -->
-    <h3 class="text-center mt-3 text-white"><b>Clara</b></h3>
-    <div class="text-center">
-        <button class="btn btn-secondary userNameButton" type="button">Your Name Please ❓</button>
-    </div>
-    <div class="text-center mt-3">
-        <button type="button" class="botStatus btn btn-primary btn-sm d-none">🤖 Doc Assistance Mode</button>
-        <button type="button" class="botDevStatus btn btn-dark btn-sm d-none"> 🦾Development Mode🚀</button>
-    </div>
+<body>
+    <section class="hack-meet-dashboard">
+        <div class="hack-user-video w-75">
+            <p class="hackuser-name"><i class="fa fa-user" aria-hidden="true"></i>
+                you</p>
+            <img src="images/face-scan.png" class="hack-user-img" alt="user img" title="User Img">
 
-    <div class="container">
-        <!-- scroll bar shouldnt be visible -->
-        <div class="mt-3 p-3 h-90 chat-div custom-scrollbar" style="overflow-y: auto; max-height: 70vh;">
-
-            <!-- Bot Chat -->
-            <div class="bot-chat">
-                <div class="d-inline-block float-left mb-1" style="max-width: 50%;">
-                    <p class="bg-danger py-2 px-3 rounded text-break text-white" style="white-space: pre-wrap;">Hi, Im Clara How can i help you</p>
-                </div>
-                <div class="clearfix"></div>
+            <div class="hack-other-user">
+                <img src="images/face-scan.png" class="hack-user-img" alt="user img" title="User Img">
+                <p class="hackother-name"><i class="fa fa-user" aria-hidden="true"></i>
+                    Karthikraj Velayutham</p>
             </div>
-
         </div>
-        <!-- code editor -->
-        <!-- <textarea id="myCodeEditor" name="myCodeEditor"></textarea> -->
-        <!-- make this stick to bottom of the page -->
-        <div class="input-container container position-fixed" style="bottom: 15px; left: 50%; transform: translateX(-50%);">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <audio controls>
-                        <!-- example source, replace with your desired source -->
-                      
-                    </audio>
-                </div>
+        <div id="hackremove" class="hack-user-chat w-25">
+            <div class="d-flex mb-4">
+                <h4 class="mr-auto">In-call messages</h4>
+                <a href="javascript:void(0)" id="hackChatClose"><i class="fa fa-times" aria-hidden="true"></i></a>
             </div>
-            <div class="row">
-                <div class="col-12 col-sm chatControls">
-                    <div class="input-group mx-1 my-3 custom-mobile">
-                        <input type="text" class="form-control chatInput" placeholder="Type your message...">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary sendChat" type="button"><i class="fas fa-paper-plane"></i></button>
-                            <button class="btn btn-primary micButton rounded-right" type="button"><i class="fas fa-microphone"></i></button>
-                            <button class="btn btn-danger stopButton rounded-right" type="button" style="display:none;"><i class="fas fa-circle"></i></button>
-                            <button class="btn btn-primary spinnerButton rounded-right" type="button" style="display:none;"><i class="fas fa-spinner"></i></button>
-                            <button for="file-upload" class="btn btn-primary file-upload-btn"><label for="file-upload"><i class="fas fa-paperclip"></i></label></button>
-                            <input id="file-upload" class="d-none" type="file" accept=".csv, .pdf" />
-                        </div>
+
+            <div class="hack-chat-conversion">
+                <div class="hack-all-chat">
+                    <div class="hack-chat-left">
+                        <p>Hi, Im Clara How can i help you</p>
+                    </div>
+                    <div class="bot-chat">
+                        <div class="clearfix"></div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <footer>
+        <div class="d-flex hack-equal">
+            <div class="hack-time-meet-link">
+                <audio controls>
+                    <!-- example source, replace with your desired source -->
+
+                </audio>
+            </div>
+            <div class="hack-options">
+                <div class="d-flex">
+                    <!-- <a href="javascript:void(0)" id="hack-micro"><i class="fa fa-microphone" aria-hidden="true"></i></a>
+                    <a href="javascript:void(0)"><i class="fa fa-eye" aria-hidden="true"></i>
+                    </a>
+                    <a href="javascript:void(0)"><i class="fa fa-eye" aria-hidden="true"></i>
+                    </a>
+                    <a href="javascript:void(0)"><i class="fa fa-eye" aria-hidden="true"></i>
+                    </a> -->
+                    <!-- <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                    </a> -->
+                    <!-- <a href="javascript:void(0)" class="active hact-call-cut"><i class="fa fa-phone" aria-hidden="true"></i>
+                    </a> -->
 
 
-    </div>
-    <!-- bootstrap modal asking userid -->
-    <div class="modal" id="useridModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Enter Username</h5>
-                </div>
-                <div class="modal-body">
-                    <label for="username">Username (no spaces):</label>
-                    <input type="text" id="username" name="username" placeholder="Username" />
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary userid_submit">Submit</button>
+                    <div class="d-flex chatControls">
+                        <button class="micButton" type="button"><i class="fas fa-microphone"></i></button>
+                        <button class="active stopButton" type="button" style="display:none;">
+                            <i class="fa fa-microphone-slash" aria-hidden="true"></i></button>
+                        <button class="sendChat" type="button"><i class="fas fa-paper-plane"></i></button>
+                        <button class="btn btn-primary spinnerButton" type="button" style="display:none;"><i
+                                class="fas fa-spinner"></i></button>
+                        <button for="file-upload" class="btn btn-danger file-upload-btn"><label for="file-upload"><i
+                                    class="fas fa-paperclip"></i></label></button>
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false"><i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-menu" x-placement="top-start">
+                            <a class="dropdown-item" href="#"><i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                                Full screen</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-bug" aria-hidden="true"></i>
+                                Report a problem</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-flag" aria-hidden="true"></i>
+
+                                Report abuse</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-cog" aria-hidden="true"></i>
+                                Setting</a>
+                        </div>
+                        <a href="javascript:void(0)" class="active hact-call-cut"><i class="fa fa-phone"
+                                aria-hidden="true"></i>
+                        </a>
+                        <input id="file-upload" class="d-none" type="file" accept=".csv, .pdf" />
+                    </div>
                 </div>
             </div>
+            <div class="hack-chat-show-hide">
+                <a href="javascript:void(0)" id="hackSidebarShow" class="active"><i class="fa fa-comment"
+                        aria-hidden="true"></i></a>
+            </div>
         </div>
-    </div>
+    </footer>
 
     <script src="index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.3/mode/javascript/javascript.min.js"></script>
+    <script>
+        $(document).ready(() => {
+  $('#success-alert').hide();
+  $('#hackSidebarShow').on('click', () => {
+    $('.hack-user-video').toggleClass('w-75');
+    $('#hackremove').toggleClass('hack-sidebar');
+    $('#hackSidebarShow').toggleClass('active');
+  });
+
+  $('#hackChatClose').on('click', () => {
+    $('.hack-user-video').toggleClass('w-75');
+    $('#hackremove').toggleClass('hack-sidebar');
+    $('#hackSidebarShow').toggleClass('active');
+  });
+});
+    </script>
 </body>
 
 </html>

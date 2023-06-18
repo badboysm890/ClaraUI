@@ -90,9 +90,9 @@ pre[class*="language-"] {
   }
 
   /* my page shouldn't scroll */
-    body {
+    /* body {
         overflow: hidden;
-    }
+    } */
 
     label {
       margin-bottom: 0 !important;
@@ -109,3 +109,219 @@ pre[class*="language-"] {
   }
   
   .CodeMirror { height: 40vh; min-height: 20vh; }
+
+
+  body {
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #202124 !important;
+ }
+  body .hack-meet-dashboard {
+    display: flex;
+    height: 90%;
+ }
+  body .hack-meet-dashboard .hack-user-video {
+    margin-right: 1rem;
+    background: #202124;
+    height: 100%;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+ }
+  body .hack-meet-dashboard .hack-user-video .hack-user-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 120px;
+ }
+  body .hack-meet-dashboard .hack-user-video .hackuser-name {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    margin: 0;
+    color: #fff;
+    font-size: 0.8rem;
+    background: #000;
+    padding: 0.3rem 1rem;
+    border-radius: 0.5rem;
+ }
+  body .hack-meet-dashboard .hack-user-video i {
+    margin-right: 0.4rem;
+ }
+  body .hack-meet-dashboard .hack-other-user {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #1f1f21;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid #606060;
+ }
+  body .hack-meet-dashboard .hack-other-user img {
+    width: 60px !important;
+    height: 60px !important;
+    margin: 0 auto 1rem;
+    display: table;
+ }
+  body .hack-meet-dashboard .hack-other-user p {
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 93px;
+ }
+  body .hack-meet-dashboard .hack-other-user p i {
+    margin-right: 0.4rem;
+    font-size: 0.8rem;
+ }
+  body .hack-user-chat {
+    background: #fff;
+    border-radius: 0.5rem;
+    transition-duration: 1s;
+    padding: 1rem;
+    overflow: hidden;
+ }
+  body .hack-user-chat h4 {
+    font-size: 1.2rem;
+    color: #202124;
+    font-weight: 400;
+ }
+  body .hack-user-chat a {
+    color: #000;
+    display: inline;
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+    font-weight: 300;
+ }
+  body .hack-user-chat .hack-chat-conversion .hack-all-chat {
+    max-height: 70vh;
+    min-height: 73vh;
+    overflow-x: auto;
+ }
+  body .hack-user-chat .hack-chat-conversion .hack-chat-left {
+    margin-top: 1rem;
+ }
+  body .hack-user-chat .hack-chat-conversion .hack-chat-left p {
+    background: #f1f3f4;
+    display: inline-block;
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 0;
+ }
+  body .hack-user-chat .hack-chat-conversion .hack-chat-right {
+    display: table;
+    width: 100%;
+    margin-top: 1rem;
+ }
+  body .hack-user-chat .hack-chat-conversion .hack-chat-right p {
+    background: #c6d4ff;
+    float: right;
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 0;
+ }
+  .hack-sidebar {
+    position: absolute;
+    right: -30%;
+ }
+  .hack-alert {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    display: table;
+    background: #000;
+    border-radius: 1rem;
+    padding: 0.5rem 1.5rem;
+    color: #fff;
+    border: 1px solid #606060;
+    font-size: 0.9rem;
+ }
+  .hack-alert i {
+    margin-right: 0.4rem;
+ }
+  footer {
+    padding: 1rem 0 0;
+ }
+  footer .hack-equal {
+    justify-content: space-between;
+    align-items: center;
+ }
+  footer .hack-time-meet-link p {
+    color: #fff;
+    margin-bottom: 0;
+ }
+  footer .hack-options a,
+  footer .hack-options button {
+    background: #3c4043;
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-align: center;
+    padding: 12px;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    color: #fff;
+    border-radius: 30px;
+    border: none !important;
+ }
+  footer .hack-options a:hover {
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    background: #3c4048;
+ }
+  footer .hack-options button:nth-of-type(1) {
+    margin-left: 0;
+ }
+  footer .hack-options .active {
+    background: #dc3545 !important;
+ }
+  footer .hack-options .hact-call-cut {
+    width: 80px;
+ }
+  footer .hack-options .hact-call-cut i {
+    transform: rotate(225deg) !important;
+ }
+  footer .hack-options .dropdown-toggle:after {
+    display: none !important;
+ }
+  footer .hack-options .dropdown-menu {
+    padding: 0;
+    transform: translate3d(752px, 479px, 0) !important;
+ }
+  footer .hack-options .dropdown-menu a {
+    width: auto;
+    height: auto;
+    background: none;
+    color: #202124;
+    text-align: left;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    font-size: 0.9rem;
+    border-radius: 0.5rem !important;
+ }
+  footer .hack-options .dropdown-menu a:hover {
+    background: none;
+    box-shadow: none;
+    color: #2a2a2a;
+ }
+  footer .hack-options .dropdown-menu a i {
+    margin-right: 0.4rem;
+ }
+  footer .hack-chat-show-hide a {
+    font-size: 2rem;
+    color: #fff;
+ }
+  footer .hack-chat-show-hide .active {
+    color: #007bff !important;
+ }
+  
